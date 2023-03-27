@@ -1,7 +1,4 @@
-﻿using System;
-using Unity.VisualScripting;
-using Unity.VisualScripting.FullSerializer;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts.Lesson3
 {
@@ -25,6 +22,21 @@ namespace Assets.Scripts.Lesson3
 			Debug.Log($"Scalar {Vector3.Dot(p1, p2)}");
 			//Векторное произведение 
 			Debug.Log($"Vector {Vector3.Cross(p1, p2)}");
+		}
+
+		//движение объекта 
+		public void TransformPositionsObject(Transform transformObject, float speed)
+		{
+			transformObject.transform.position =
+				transformObject.transform.position + Vector3.forward * 
+				speed * Time.deltaTime;
+		}
+		//движение объекта по отношению к другому объекту 
+		public void TransformPositionsObject(Transform transformObject, float speed,
+			GameObject gameObjectTo)
+		{
+			transformObject.Translate(Vector3.back * speed * Time.deltaTime,
+				gameObjectTo.transform);
 		}
 	}
 }

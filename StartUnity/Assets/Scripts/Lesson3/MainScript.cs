@@ -1,6 +1,4 @@
 using Assets.Scripts.Lesson3;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MainScript : MonoBehaviour
@@ -9,6 +7,9 @@ public class MainScript : MonoBehaviour
     private GameObject _vectorObjectOne;
 	[SerializeField]
 	private GameObject _vectorObjectTwo;
+
+    [SerializeField]
+    private float _speed;
 
 	private VectorClass vectorClass;
 
@@ -24,9 +25,9 @@ public class MainScript : MonoBehaviour
             _vectorObjectTwo.transform.position);
         print($"{result}");
 
-        vectorClass.ScalarAndVectorMultiple
-            (_vectorObjectOne.transform.position,
-			_vectorObjectTwo.transform.position);
+        vectorClass.TransformPositionsObject
+            (_vectorObjectOne.transform, _speed, 
+            _vectorObjectTwo);
     }
 
 	private void OnDrawGizmos()
