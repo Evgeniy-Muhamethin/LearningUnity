@@ -347,6 +347,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/Lesson2/InstantiateOrDestroyObject.cs"
 "Assets/Scripts/Lesson3/MainScript.cs"
+"Assets/Scripts/Lesson3/QuaternionClassTest.cs"
 "Assets/Scripts/Lesson3/VectorClass.cs"
 -langversion:9.0
 

@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\Lesson3\VectorClass.cs" />
     <Compile Include="Assets\Scripts\Lesson2\InstantiateOrDestroyObject.cs" />
     <Compile Include="Assets\Scripts\Lesson3\MainScript.cs" />
+    <Compile Include="Assets\Scripts\Lesson3\QuaternionClassTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

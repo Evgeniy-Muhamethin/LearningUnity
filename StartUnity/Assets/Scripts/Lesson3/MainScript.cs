@@ -4,9 +4,11 @@ using UnityEngine;
 public class MainScript : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _vectorObjectOne;
+    private Transform _vectorObjectOne;
 	[SerializeField]
-	private GameObject _vectorObjectTwo;
+	private Transform _vectorObjectTwo;
+    [SerializeField]
+    private Transform _upAwards;
 
     [SerializeField]
     private float _speed;
@@ -20,21 +22,18 @@ public class MainScript : MonoBehaviour
 
     void Update()
     {
-        float result = vectorClass.DistanceObject
-            (_vectorObjectOne.transform.position,
-            _vectorObjectTwo.transform.position);
-        print($"{result}");
-
-        vectorClass.TransformPositionsObject
-            (_vectorObjectOne.transform, _speed, 
-            _vectorObjectTwo);
+        transform.rotation =
+            Quaternion.Slerp(
+                _vectorObjectTwo.rotation,
+                _upAwards.rotation, Time.deltaTime * _speed);
+        _vectorObjectOne.rotation = transform.rotation;
     }
 
-	private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawLine
-            (_vectorObjectOne.transform.position,
-            _vectorObjectTwo.transform.position);
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.blue;
+    //    Gizmos.DrawLine
+    //        (_vectorObjectOne.transform.position,
+    //        _vectorObjectTwo.transform.position);
+    //}
 }

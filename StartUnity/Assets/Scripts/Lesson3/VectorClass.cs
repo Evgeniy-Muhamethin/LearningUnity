@@ -38,5 +38,28 @@ namespace Assets.Scripts.Lesson3
 			transformObject.Translate(Vector3.back * speed * Time.deltaTime,
 				gameObjectTo.transform);
 		}
+
+		public void QuaternionTest(Transform transform1,
+			Transform gameObject1, Transform gameObject)
+		{
+			#region LookRotation
+			//Vector3 vector3 = transform.position - gameObject.transform.position;
+			//Quaternion quaternion = Quaternion.LookRotation(vector3);
+			//gameObject.transform.rotation = quaternion;
+			#endregion
+
+			#region Slerp
+			transform1.rotation = Quaternion.Slerp(gameObject1.rotation,
+				gameObject.rotation, Time.deltaTime);
+			#endregion
+		}
+
+		public Quaternion QuaternionTest(GameObject gameObject)
+		{
+			Quaternion result = new Quaternion();
+			gameObject.transform.rotation = Quaternion.Euler(0,-30,0);
+			result = gameObject.transform.rotation;
+			return result;
+		}
 	}
 }
