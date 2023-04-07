@@ -5,15 +5,12 @@ using UnityEngine;
 public class QuaternionClassTest : MonoBehaviour
 {
     [SerializeField]
-    private Transform _from;
-
+    private Transform _toTransform;
     void FixedUpdate()
     {
-        //transform.rotation = Quaternion.Slerp(_from.rotation, _to.rotation, Time.time);
-        //print($"{transform.rotation}");
-
-        //gameObject.transform.rotation = Quaternion.FromToRotation(Vector3.forward, Vector3.up);
-
-        transform.RotateAround(_from.position, Vector3.forward, 10);
+        if (gameObject.transform.position != _toTransform.position)
+        {
+            gameObject.transform.Translate(new Vector3(1 * 5 * Time.deltaTime, 0, 0));
+        }
     }
 }
