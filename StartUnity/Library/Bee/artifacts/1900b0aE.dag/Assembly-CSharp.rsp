@@ -350,6 +350,7 @@
 "Assets/Scripts/Lesson3/QuaternionClassTest.cs"
 "Assets/Scripts/Lesson3/VectorClass.cs"
 "Assets/Scripts/Lesson4/MainLesson.cs"
+"Assets/Scripts/Lesson4/MovePlayer.cs"
 -langversion:9.0
 
 /deterministic
