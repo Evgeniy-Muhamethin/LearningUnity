@@ -7,6 +7,11 @@ public class MainLesson : MonoBehaviour
 	[SerializeField]
 	private Transform _transform;
 
+	private void Start()
+	{
+		
+	}
+
 	private void FixedUpdate()
 	{
 		
