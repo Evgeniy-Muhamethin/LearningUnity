@@ -351,6 +351,7 @@
 "Assets/Scripts/Lesson3/VectorClass.cs"
 "Assets/Scripts/Lesson4/MovePlayer.cs"
 "Assets/Scripts/Lesson5/MainLesson.cs"
+"Assets/Scripts/Lesson5/TestCode.cs"
 -langversion:9.0
 
 /deterministic

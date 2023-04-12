@@ -1,44 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class MainLesson : MonoBehaviour
 {
 	[SerializeField]
 	private Transform _transform;
 
-
-	private float _from = 1;
-	private float _to = 10;
-	
-	private float _time = 5.0f;
-
-	private delegate void RandomRageMethodDelegate();
-
-	private RandomRageMethodDelegate RandomRageDelegate;
+	TestCode _testCode;
 
 	private void Start()
 	{
-		RandomRageDelegate = RandomRageMethod;
-		Invoke($"RandomRageMethod", _time);
+		_testCode = new TestCode();
 	}
-
-	float _repeatRate = 10f;
 
 	private void FixedUpdate()
 	{
-		InvokeRepeating("RandomRageMethod", _time, _repeatRate);
-
-		if (Input.GetKey(KeyCode.Tab))
+		StartCoroutine(TransformObject(_transform));
+		if (Input.GetKey(KeyCode.Space))
 		{
-			CancelInvoke();
+			StopCoroutine(TransformObject(_transform));
 		}
+	}
+
+	WaitForSeconds _waitTime = 
+		new WaitForSeconds(0.1f);
+
+	IEnumerator TransformObject(Transform transform)
+	{
+		_testCode.MoveObject(transform);
+		print("Corutine");
+		yield return _waitTime;
 	}
 
 	private void RandomRageMethod()
 	{
-		float result = Random.Range(0f, 10f);
+		float result = UnityEngine.Random.Range(0f, 10f);
 		print(result);
 	}
 }

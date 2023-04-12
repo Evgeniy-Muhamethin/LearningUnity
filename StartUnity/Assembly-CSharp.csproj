@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Lesson2\InstantiateOrDestroyObject.cs" />
     <Compile Include="Assets\Scripts\Lesson5\MainLesson.cs" />
     <Compile Include="Assets\Scripts\Lesson3\MainScript.cs" />
+    <Compile Include="Assets\Scripts\Lesson5\TestCode.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
