@@ -6,9 +6,4 @@ public class TestCode
     {
         objectTransform.Translate(Vector3.forward * Time.deltaTime);
     }
-
-    public void RayCastHit()
-    {
-
-    }
 }
