@@ -353,6 +353,8 @@
 "Assets/Scripts/Lesson5/MainLesson.cs"
 "Assets/Scripts/Lesson5/RayCastHitClass.cs"
 "Assets/Scripts/Lesson5/TestCode.cs"
+"Assets/Scripts/Lesson6/Lesson6Code.cs"
+"Assets/Scripts/Lesson6/MainLesson6.cs"
 -langversion:9.0
 
 /deterministic

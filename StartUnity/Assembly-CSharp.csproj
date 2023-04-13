@@ -58,12 +58,14 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Lesson3\VectorClass.cs" />
     <Compile Include="Assets\Scripts\Lesson4\MovePlayer.cs" />
+    <Compile Include="Assets\Scripts\Lesson5\RayCastHitClass.cs" />
     <Compile Include="Assets\Scripts\Lesson3\QuaternionClassTest.cs" />
     <Compile Include="Assets\Scripts\Lesson5\TestCode.cs" />
     <Compile Include="Assets\Scripts\Lesson2\InstantiateOrDestroyObject.cs" />
     <Compile Include="Assets\Scripts\Lesson5\MainLesson.cs" />
     <Compile Include="Assets\Scripts\Lesson3\MainScript.cs" />
-    <Compile Include="Assets\Scripts\Lesson5\RayCastHitClass.cs" />
+    <Compile Include="Assets\Scripts\Lesson6\MainLesson6.cs" />
+    <Compile Include="Assets\Scripts\Lesson6\Lesson6Code.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
